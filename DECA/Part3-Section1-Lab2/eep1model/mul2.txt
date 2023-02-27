@@ -1,9 +1,9 @@
-EXT #85
-MOV R2, #60 //R6:R7 == SUM, R1:R2 == OP2SHIFTED == OP2, R0 == OP1, TEMP == R4,  R5 == #1
+// EXT #85
+MOV R2, #255 //R6:R7 == SUM, R1:R2 == OP2SHIFTED == OP2, R0 == OP1, TEMP == R4,  R5 == #1
 MOV R7, #0
 MOV R6, #0
 MOV R5, #1
-MOV R0, #-5
+MOV R0, #255
 JEQ 9  //if OP1 == 0; escape while loop
 AND R4, R0, R5
 JEQ 3
