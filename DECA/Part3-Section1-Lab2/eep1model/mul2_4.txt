@@ -1,6 +1,7 @@
-MOV R1, #9 //BR
-MOV R0, #1 
-MOV R2, #-13 //QR
+// EXT #85
+MOV R1, #255 //BR
+MOV R0, #1 // constant 1
+MOV R2, #255 //QR
 MOV R3, #0 //AC
 MOV R4, #16 //SC
 MOV R5, #0 //QN1
@@ -15,7 +16,7 @@ JNE 2
 ADD R3, R1
 ASR R3, R3, #1
 XSR R2, R2, #1
+MOV R5, #0
 ADC R5, #0
 SUB R4, #1
-JNE -13
-AND R6, R3, R2
+JNE -14
