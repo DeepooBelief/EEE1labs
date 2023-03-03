@@ -1,0 +1,22 @@
+EXT #98
+MOV R1, #255 //BR
+MOV R0, #1 // constant 1
+MOV R2, #108 //QR
+MOV R3, #0 //AC
+MOV R4, #16 //SC
+MOV R5, #0 //QN1
+MOV R5, R5
+JNE 5
+AND R6, R2, R0 
+JEQ 6
+SUB R3, R1
+JMP 4 
+AND R6, R2, R0
+JNE 2
+ADD R3, R1
+ASR R3, R3, #1
+XSR R2, R2, #1
+MOV R5, #0
+ADC R5, #0
+SUB R4, #1
+JNE -14
