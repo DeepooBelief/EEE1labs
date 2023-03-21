@@ -4,30 +4,19 @@ MOV R7, #0
 MOV R6, #0
 MOV R5, #1
 MOV R0, #255
-JEQ 27  //if OP1 == 0; escape while loop
-AND R4, R0, R5 //and
-JEQ 14 // if X
-ADD R7, R7, R2 //sum
+JEQ 16  //if OP1 == 0; escape while loop
+AND R4, R0, R5  //AND
+JEQ 3
+ADD R7, R7, R2 //SUM
 ADC R6, R6, R1
-LSL R2, R2, #1 //op2 shift
+LSL R2, R2, #1	//OP2SHIFTED
 ADC R1, R1, R1
-LSR R0, R0, #1 //op1 shift
-AND R4, R0, R5 //and
-JEQ 3 // if X
-ADD R7, R7, R2 //sum
+LSR R0, R0, #1	//OP1 SHIFT
+AND R4, R0, R5  //AND
+JEQ 3
+ADD R7, R7, R2 //SUM
 ADC R6, R6, R1
-LSL R2, R2, #1 //op2 shift
+LSL R2, R2, #1	//OP2SHIFTED
 ADC R1, R1, R1
-LSR R0, R0, #1 //op1 shift
+LSR R0, R0, #1	//OP1 SHIFT
 JMP -15
-LSR R0, R0, #1 //op1 shift
-LSL R2, R2, #1 //op2 shift
-ADC R1, R1, R1
-AND R4, R0, R5 //and
-JEQ 3 // if X
-ADD R7, R7, R2 //sum
-ADC R6, R6, R1
-LSL R2, R2, #1 //op2 shift
-ADC R1, R1, R1
-LSR R0, R0, #1 //op1 shift
-JMP -26

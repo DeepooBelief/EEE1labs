@@ -1,2 +1,6 @@
-MOV R2, #8
-LSR R2, R2, #4
+MOV R1, #1
+LSR R1, R1, #1
+ADD R0, #1
+ADD R0, #0
+LSR R1, R1, #1
+ADD R0, #1

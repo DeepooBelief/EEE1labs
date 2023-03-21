@@ -5,11 +5,11 @@ MOV R6, #0
 MOV R5, #1
 MOV R0, #255
 JEQ 9  //if OP1 == 0; escape while loop
-AND R4, R0, R5
+AND R4, R0, R5  //AND
 JEQ 3
-ADD R7, R7, R2
+ADD R7, R7, R2 //SUM
 ADC R6, R6, R1
-LSL R2, R2, #1
+LSL R2, R2, #1	//OP2SHIFTED
 ADC R1, R1, R1
-LSR R0, R0, #1
+LSR R0, R0, #1	//OP1 SHIFT
 JMP -8

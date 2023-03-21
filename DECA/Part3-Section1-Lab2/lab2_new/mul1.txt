@@ -1,0 +1,11 @@
+MOV R1, #5 //R2 == SUM, R1 == OP2SHIFTED == OP2, R0 == OP1, TEMP == R4,  R5 == #1
+MOV R2, #0 
+MOV R5, #1
+MOV R0, #12
+JEQ 7  //if OP1 == 0; escape while loop
+AND R4, R0, R5
+JEQ 2
+ADD R2, R2, R1
+LSL R1, R1, #1
+LSR R0, R0, #1
+JMP -6
