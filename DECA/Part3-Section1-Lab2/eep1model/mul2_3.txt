@@ -1,0 +1,33 @@
+EXT #85
+MOV R2, #65 //R6:R7 == SUM, R1:R2 == OP2SHIFTED == OP2, R0 == OP1, TEMP == R4,  R5 == #1
+MOV R7, #0
+MOV R6, #0
+MOV R5, #1
+MOV R0, #255
+JEQ 27  //if OP1 == 0; escape while loop
+AND R4, R0, R5 //and
+JEQ 14 // if X
+ADD R7, R7, R2 //sum
+ADC R6, R6, R1
+LSL R2, R2, #1 //op2 shift
+ADC R1, R1, R1
+LSR R0, R0, #1 //op1 shift
+AND R4, R0, R5 //and
+JEQ 3 // if X
+ADD R7, R7, R2 //sum
+ADC R6, R6, R1
+LSL R2, R2, #1 //op2 shift
+ADC R1, R1, R1
+LSR R0, R0, #1 //op1 shift
+JMP -15
+LSR R0, R0, #1 //op1 shift
+LSL R2, R2, #1 //op2 shift
+ADC R1, R1, R1
+AND R4, R0, R5 //and
+JEQ 3 // if X
+ADD R7, R7, R2 //sum
+ADC R6, R6, R1
+LSL R2, R2, #1 //op2 shift
+ADC R1, R1, R1
+LSR R0, R0, #1 //op1 shift
+JMP -26

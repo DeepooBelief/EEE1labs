@@ -1,9 +1,9 @@
 EXT #85
-MOV R2, #60 //R6:R7 == SUM, R1:R2 == OP2SHIFTED == OP2, R0 == OP1, TEMP == R4,  R5 == #1
-MOV R7, #0  //R6:R7 = 0
+MOV R2, #65 //R6:R7 == SUM, R1:R2 == OP2SHIFTED == OP2, R0 == OP1, TEMP == R4,  R5 == #1
+MOV R7, #0
 MOV R6, #0
-MOV R5, #1 //R5 = #1
-MOV R0, #128
+MOV R5, #1
+MOV R0, #255
 AND R4, R0, R5 // loop start here
 JEQ 3
 ADD R7, R7, R2
